@@ -3,19 +3,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //q01();
-        //q02();
-        //q03();
-        //q04();
-        //q05();
-        //q06();
-        //q07();
-        //q08();
-        //q09();
-        //q10();
-        //q11();
-        //q12();
-        q13();
+        // q01();
+        // q02();
+        // q03();
+        // q04();
+        // q05();
+        // q06();
+        // q07();
+        // q08();
+        // q09();
+        // q10();
+        // q11();
+        // q12();
+        // q13();
+        q14();
     }
 
     private static void q01() {
@@ -163,8 +164,9 @@ public class Main {
     }
 
     private static void q09() {
-        //Faça um programa na linguagem Java que receba três números pelo teclado e mostre, no console, o
-        //maior deles.
+        // Faça um programa na linguagem Java que receba três números pelo teclado e
+        // mostre, no console, o
+        // maior deles.
         float maior = -1;
 
         Scanner scanner = new Scanner(System.in);
@@ -178,13 +180,14 @@ public class Main {
         scanner.close();
         System.out.println("O maior número foi o " + maior);
     }
-    
+
     private static void q10() {
-        //Faça um programa na linguagem Java que receba um número inteiro pelo teclado e mostre, no console,
-        //se o número inteiro é par ou ímpar.
+        // Faça um programa na linguagem Java que receba um número inteiro pelo teclado
+        // e mostre, no console,
+        // se o número inteiro é par ou ímpar.
         Scanner scanner = new Scanner(System.in);
         float n = scanner.nextFloat();
-        if(n%2==0){
+        if (n % 2 == 0) {
             System.out.println("O número " + n + " é par");
         } else {
             System.out.println("O número " + n + " é ímpar");
@@ -193,11 +196,12 @@ public class Main {
     }
 
     private static void q11() {
-        //Faça um programa na linguagem Java que receba um número inteiro pelo teclado e mostre, no console,
-        //se o número inteiro é par ou ímpar.
+        // Faça um programa na linguagem Java que receba um número inteiro pelo teclado
+        // e mostre, no console,
+        // se o número inteiro é par ou ímpar.
         Scanner scanner = new Scanner(System.in);
         float n = scanner.nextFloat();
-        if(n%2==0){
+        if (n % 2 == 0) {
             System.out.println("O número " + n + " é par");
         } else {
             System.out.println("O número " + n + " é ímpar");
@@ -206,9 +210,11 @@ public class Main {
     }
 
     private static void q12() {
-        //Faça um programa na linguagem Java que peça uma nota pelo teclado de 0 a 10. Mostre uma
-        //mensagem, no console, caso o valor seja inválido (nota menor que 0 ou maior 10) e continue pedindo
-        //notas até que o usuário informe um valor válido.
+        // Faça um programa na linguagem Java que peça uma nota pelo teclado de 0 a 10.
+        // Mostre uma
+        // mensagem, no console, caso o valor seja inválido (nota menor que 0 ou maior
+        // 10) e continue pedindo
+        // notas até que o usuário informe um valor válido.
         Scanner scanner = new Scanner(System.in);
         int nota = -1;
 
@@ -226,11 +232,12 @@ public class Main {
         scanner.close();
     }
 
-    
     private static void q13() {
-        //Numa eleição existem três candidatos. Faça um programa na linguagem Java que peça o número total de
-        //eleitores pelo teclado. Peça para cada eleitor vota pelo teclado e, ao final, mostre no console o número
-        //de votos de cada candidato.
+        // Numa eleição existem três candidatos. Faça um programa na linguagem Java que
+        // peça o número total de
+        // eleitores pelo teclado. Peça para cada eleitor vota pelo teclado e, ao final,
+        // mostre no console o número
+        // de votos de cada candidato.
         int votosCandidato1 = 0, votosCandidato2 = 0, votosCandidato3 = 0;
 
         System.out.print("Digite o número de eleitores: ");
@@ -264,38 +271,108 @@ public class Main {
         scanner.close();
     }
 
-    //Faça um programa na linguagem Java que receba, pelo teclado, 10 números inteiros maior que 1, 
-    //verifique se cada número fornecido é primo ou não e mostre no console uma mensagem de número
-    //primo ou de número não primo. Um número é primo quando é divisível apenas por 1 e por ele mesmo.
+    private static void q14() {
+        // Faça um programa na linguagem Java que receba, pelo teclado, 10 números inteiros maior que 1,
+        // verifique se cada número fornecido é primo ou não e mostre no console uma mensagem de número
+        // primo ou de número não primo. Um número é primo quando é divisível apenas por 1 e por ele mesmo.
+        int[] numeros = new int[10];
 
-    //Faça um programa na linguagem Java que mostre, no console, os primeiros 10 termos da sequência de
-    //Fibonacci: 0-1-1-2-3-5-8-13-21-34-...
+        Scanner scanner = new Scanner(System.in);
 
-    //Faça um programa na linguagem Java que dado um número inteiro positivo lido pelo teclado, calcule o
-    //fatorial do número e mostre o resultado no console.
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Digite um número inteiro maior que 1: ");
+            int n = scanner.nextInt();
+            if (n <= 1) {
+                System.out.println("Número inválido. Tente novamente.");
+                i--;
+                continue;
+            } else {
+                numeros[i] = n;
+            }
+        }
 
-    //Faça um programa na linguagem Java que preencha, por meio do teclado, um vetor de 5 números
-    //inteiros e mostre-os no console.
+        for (int n : numeros) {
+            boolean isPrimo = true;
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    System.out.println(n + " não é primo.");
+                    isPrimo = false;
+                    break;
+                }
+            }
+            if (isPrimo) {
+                System.out.println(n + " é primo.");
+            }
+        }
 
-    //Faça um programa na linguagem Java que preencha, por meio do teclado, um vetor de 10 números reais
-    //e mostre-os no console na ordem inversa.
+        scanner.close();
+    }
 
-    //Faça um programa na linguagem Java que preencha por meio do teclado um vetor de 5 números inteiros
-    //e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5 números e os 5 números
+    private static void q15() {
+        // Faça um programa na linguagem Java que mostre, no console, os primeiros 10
+        // termos da sequência de
+        // Fibonacci: 0-1-1-2-3-5-8-13-21-34-...
+    }
 
-    //Faça um programa na linguagem Java que receba, pelo teclado, 20 números inteiros e armazene-os em
-    //um vetor. Armazene os números pares no vetor denominado “par” e os números ímpares no vetor
-    //“ímpar”. Mostre no console os três vetores.
+    private static void q16() {
+        // Faça um programa na linguagem Java que dado um número inteiro positivo lido
+        // pelo teclado, calcule o
+        // fatorial do número e mostre o resultado no console.
+    }
 
-    //Faça um programa na linguagem Java que receba, pelo teclado, 2 Strings e informe, pelo console, o
-    //conteúdo delas seguido do seu comprimento. Mostre também, no console, se as duas Strings possuem o
-    //mesmo comprimento e são iguais ou diferentes no conteúdo.
+    private static void q17() {
+        // Faça um programa na linguagem Java que preencha, por meio do teclado, um
+        // vetor de 5 números
+        // inteiros e mostre-os no console.
+    }
 
-    //Reverso do número. Faça um programa na linguagem Java que mostre, no console, o reverso de um
-    //número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
+    private static void q18() {
+        // Faça um programa na linguagem Java que preencha, por meio do teclado, um
+        // vetor de 10 números reais
+        // e mostre-os no console na ordem inversa.
 
-    //Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo teclado dois valores
-    //numéricos e a operação desejada (soma, subtração, multiplicação ou divisão) mostre, no console, o
-    //resultado do cálculo.
+    }
+
+    private static void q19() {
+        // Faça um programa na linguagem Java que preencha por meio do teclado um vetor
+        // de 5 números inteiros
+        // e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5
+        // números e os 5 números
+
+    }
+
+    private static void q20() {
+        // Faça um programa na linguagem Java que receba, pelo teclado, 20 números
+        // inteiros e armazene-os em
+        // um vetor. Armazene os números pares no vetor denominado “par” e os números
+        // ímpares no vetor
+        // “ímpar”. Mostre no console os três vetores.
+
+    }
+
+    private static void q21() {
+        // Faça um programa na linguagem Java que receba, pelo teclado, 2 Strings e
+        // informe, pelo console, o
+        // conteúdo delas seguido do seu comprimento. Mostre também, no console, se as
+        // duas Strings possuem o
+        // mesmo comprimento e são iguais ou diferentes no conteúdo.
+
+    }
+
+    private static void q22() {
+        // Reverso do número. Faça um programa na linguagem Java que mostre, no console,
+        // o reverso de um
+        // número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
+
+    }
+
+    private static void q23() {
+        // Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo
+        // teclado dois valores
+        // numéricos e a operação desejada (soma, subtração, multiplicação ou divisão)
+        // mostre, no console, o
+        // resultado do cálculo.
+
+    }
 
 }
