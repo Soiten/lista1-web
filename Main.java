@@ -264,4 +264,38 @@ public class Main {
         scanner.close();
     }
 
+    //Faça um programa na linguagem Java que receba, pelo teclado, 10 números inteiros maior que 1, 
+    //verifique se cada número fornecido é primo ou não e mostre no console uma mensagem de número
+    //primo ou de número não primo. Um número é primo quando é divisível apenas por 1 e por ele mesmo.
+
+    //Faça um programa na linguagem Java que mostre, no console, os primeiros 10 termos da sequência de
+    //Fibonacci: 0-1-1-2-3-5-8-13-21-34-...
+
+    //Faça um programa na linguagem Java que dado um número inteiro positivo lido pelo teclado, calcule o
+    //fatorial do número e mostre o resultado no console.
+
+    //Faça um programa na linguagem Java que preencha, por meio do teclado, um vetor de 5 números
+    //inteiros e mostre-os no console.
+
+    //Faça um programa na linguagem Java que preencha, por meio do teclado, um vetor de 10 números reais
+    //e mostre-os no console na ordem inversa.
+
+    //Faça um programa na linguagem Java que preencha por meio do teclado um vetor de 5 números inteiros
+    //e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5 números e os 5 números
+
+    //Faça um programa na linguagem Java que receba, pelo teclado, 20 números inteiros e armazene-os em
+    //um vetor. Armazene os números pares no vetor denominado “par” e os números ímpares no vetor
+    //“ímpar”. Mostre no console os três vetores.
+
+    //Faça um programa na linguagem Java que receba, pelo teclado, 2 Strings e informe, pelo console, o
+    //conteúdo delas seguido do seu comprimento. Mostre também, no console, se as duas Strings possuem o
+    //mesmo comprimento e são iguais ou diferentes no conteúdo.
+
+    //Reverso do número. Faça um programa na linguagem Java que mostre, no console, o reverso de um
+    //número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
+
+    //Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo teclado dois valores
+    //numéricos e a operação desejada (soma, subtração, multiplicação ou divisão) mostre, no console, o
+    //resultado do cálculo.
+
 }
