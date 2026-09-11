@@ -24,7 +24,9 @@ public class Main {
         // q18();
         // q19();
         // q20();
-        q21();
+        // q21();
+        // q22();
+        // q23();
     }
 
     private static void q01() {
@@ -473,7 +475,7 @@ public class Main {
         s2 = scanner.nextLine();
         
         scanner.close();
-        
+
         if (s1.length() != s2.length()) {
             System.out.println("São diferentes");
             return;
@@ -493,9 +495,19 @@ public class Main {
 
     private static void q22() {
         // Reverso do número. Faça um programa na linguagem Java que mostre, no console,
-        // o reverso de um número inteiro informado pelo teclado. Por exemplo: 127 <->
-        // 721
+        // o reverso de um número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
+        System.out.println("Digite um número positivo: ");
 
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.close();
+
+        System.out.print("Digitos inversos: ");
+        while(n > 0){
+            int ultimoDigito = n%10;
+            System.out.print(ultimoDigito);
+            n = (int) Math.floor(n/10);
+        }
     }
 
     private static void q23() {
@@ -503,7 +515,24 @@ public class Main {
         // teclado dois valores
         // numéricos e a operação desejada (soma, subtração, multiplicação ou divisão)
         // mostre, no console, o resultado do cálculo.
+        System.out.print("---Calculadora---\nInforme dois números: ");
+        Scanner scanner = new Scanner(System.in);
+        float n1 = scanner.nextFloat();
+        float n2 = scanner.nextFloat();
+        
+        System.out.println("1 +\n2 -\n3 *\n4 /\nAgora diga a operação desejada (símbolo ou número equivalente): ");
+        String operacao = scanner.next();
+        
+        float result = -1;
+        
+        if("1+".contains(operacao)) result = n1 + n2;
+        else if("2-".contains(operacao)) result = n1 - n2;
+        else if("3*".contains(operacao)) result = n1 * n2;
+        else if("4/".contains(operacao)) result = n1 / n2;
+        else {System.out.println("Operação inválida!"); return;}
 
+        System.out.println("Resultado: " + result);
+        scanner.close();
     }
 
 }
