@@ -20,7 +20,8 @@ public class Main {
         // q15();
         // q16();
         // q17();
-        q18();
+        // q18();
+        q19();
     }
 
     private static void q01() {
@@ -391,6 +392,29 @@ public class Main {
         // Faça um programa na linguagem Java que preencha por meio do teclado um vetor de 5 números inteiros
         // e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5 números e os 5 números
 
+        int[] numeros = new int[5];
+
+        System.out.print("Digite 5 inteiros: ");
+
+        Scanner scanner = new Scanner(System.in);
+        for(int i = 0; i < 5; i++){
+            numeros[i] = scanner.nextInt();
+        }
+
+        int soma = 0;
+        for(int i = 0; i < 5; i++){
+            soma+=numeros[i];
+        }
+
+        int mult = 1;
+        for(int i = 0; i < 5; i++){
+            mult*=numeros[i];
+        }
+        
+        System.out.println("Soma de todos: " + soma);
+        System.out.println("Produto de todos: " + mult);
+
+        scanner.close();
     }
 
     private static void q20() {
