@@ -19,7 +19,8 @@ public class Main {
         // q14();
         // q15();
         // q16();
-        q17();
+        // q17();
+        q18();
     }
 
     private static void q01() {
@@ -349,6 +350,9 @@ public class Main {
         // inteiros e mostre-os no console.
 
         int[] numeros = new int[5];
+
+        System.out.print("Digite 5 inteiros: ");
+
         Scanner scanner = new Scanner(System.in);
         for(int i = 0; i < 5; i++){
             numeros[i] = scanner.nextInt();
@@ -366,13 +370,26 @@ public class Main {
         // vetor de 10 números reais
         // e mostre-os no console na ordem inversa.
 
+        float[] numeros = new float[10];
+
+        System.out.print("Digite 10 números: ");
+
+        Scanner scanner = new Scanner(System.in);
+        for(int i = 0; i < 10; i++){
+            numeros[i] = scanner.nextFloat();
+        }
+
+        System.out.print("Os números na ordem inversa: ");
+
+        for(int i = 9; i >= 0; i--){
+            System.out.print(numeros[i] + " ");
+        }
+        scanner.close();
     }
 
     private static void q19() {
-        // Faça um programa na linguagem Java que preencha por meio do teclado um vetor
-        // de 5 números inteiros
-        // e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5
-        // números e os 5 números
+        // Faça um programa na linguagem Java que preencha por meio do teclado um vetor de 5 números inteiros
+        // e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5 números e os 5 números
 
     }
 
@@ -388,20 +405,17 @@ public class Main {
         // Faça um programa na linguagem Java que receba, pelo teclado, 2 Strings e
         // informe, pelo console, o conteúdo delas seguido do seu comprimento. Mostre
         // também, no console, se as
-        // duas Strings possuem o mesmo comprimento e são iguais ou diferentes no
-        // conteúdo.
+        // duas Strings possuem o mesmo comprimento e são iguais ou diferentes no conteúdo.
     }
 
     private static void q22() {
         // Reverso do número. Faça um programa na linguagem Java que mostre, no console,
-        // o reverso de um número inteiro informado pelo teclado. Por exemplo: 127 <->
-        // 721
+        // o reverso de um número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
 
     }
 
     private static void q23() {
-        // Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo
-        // teclado dois valores
+        // Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo teclado dois valores
         // numéricos e a operação desejada (soma, subtração, multiplicação ou divisão)
         // mostre, no console, o resultado do cálculo.
 
