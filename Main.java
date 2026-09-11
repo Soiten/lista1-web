@@ -522,6 +522,7 @@ public class Main {
         
         System.out.println("1 +\n2 -\n3 *\n4 /\nAgora diga a operação desejada (símbolo ou número equivalente): ");
         String operacao = scanner.next();
+        scanner.close();
         
         float result = -1;
         
@@ -532,7 +533,6 @@ public class Main {
         else {System.out.println("Operação inválida!"); return;}
 
         System.out.println("Resultado: " + result);
-        scanner.close();
     }
 
 }
