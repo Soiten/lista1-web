@@ -16,7 +16,8 @@ public class Main {
         // q11();
         // q12();
         // q13();
-        q14();
+        // q14();
+        q15();
     }
 
     private static void q01() {
@@ -309,69 +310,70 @@ public class Main {
     }
 
     private static void q15() {
-        // Faça um programa na linguagem Java que mostre, no console, os primeiros 10
-        // termos da sequência de
-        // Fibonacci: 0-1-1-2-3-5-8-13-21-34-...
+        //Faça um programa na linguagem Java que mostre, no console, os primeiros 10
+        //termos da sequência de Fibonacci: 0-1-1-2-3-5-8-13-21-34-...
+        int anterior = 0;
+        int atual = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.println(atual);
+            int temp = atual;
+            atual += anterior;
+            anterior = temp;
+            if(atual == 0) atual++;
+        }
     }
 
     private static void q16() {
-        // Faça um programa na linguagem Java que dado um número inteiro positivo lido
-        // pelo teclado, calcule o
-        // fatorial do número e mostre o resultado no console.
+        //Faça um programa na linguagem Java que dado um número inteiro positivo lido
+        //pelo teclado, calcule o
+        //fatorial do número e mostre o resultado no console.
     }
 
     private static void q17() {
-        // Faça um programa na linguagem Java que preencha, por meio do teclado, um
-        // vetor de 5 números
-        // inteiros e mostre-os no console.
+        //Faça um programa na linguagem Java que preencha, por meio do teclado, um
+        //vetor de 5 números
+        //inteiros e mostre-os no console.
     }
 
     private static void q18() {
-        // Faça um programa na linguagem Java que preencha, por meio do teclado, um
-        // vetor de 10 números reais
-        // e mostre-os no console na ordem inversa.
+        //Faça um programa na linguagem Java que preencha, por meio do teclado, um
+        //vetor de 10 números reais
+        //e mostre-os no console na ordem inversa.
 
     }
 
     private static void q19() {
-        // Faça um programa na linguagem Java que preencha por meio do teclado um vetor
-        // de 5 números inteiros
-        // e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5
-        // números e os 5 números
+        //Faça um programa na linguagem Java que preencha por meio do teclado um vetor
+        //de 5 números inteiros
+        //e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5
+        //números e os 5 números
 
     }
 
     private static void q20() {
-        // Faça um programa na linguagem Java que receba, pelo teclado, 20 números
-        // inteiros e armazene-os em
-        // um vetor. Armazene os números pares no vetor denominado “par” e os números
-        // ímpares no vetor
-        // “ímpar”. Mostre no console os três vetores.
+        //Faça um programa na linguagem Java que receba, pelo teclado, 20 números
+        //inteiros e armazene-os em um vetor.
+        //Armazene os números pares no vetor denominado “par” e os números
+        //ímpares no vetor “ímpar”. Mostre no console os três vetores.
 
     }
 
     private static void q21() {
-        // Faça um programa na linguagem Java que receba, pelo teclado, 2 Strings e
-        // informe, pelo console, o
-        // conteúdo delas seguido do seu comprimento. Mostre também, no console, se as
-        // duas Strings possuem o
-        // mesmo comprimento e são iguais ou diferentes no conteúdo.
-
+        //Faça um programa na linguagem Java que receba, pelo teclado, 2 Strings e
+        //informe, pelo console, o conteúdo delas seguido do seu comprimento. Mostre também, no console, se as
+        //duas Strings possuem o mesmo comprimento e são iguais ou diferentes no conteúdo.
     }
 
     private static void q22() {
-        // Reverso do número. Faça um programa na linguagem Java que mostre, no console,
-        // o reverso de um
-        // número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
+        //Reverso do número. Faça um programa na linguagem Java que mostre, no console,
+        //o reverso de um número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
 
     }
 
     private static void q23() {
-        // Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo
-        // teclado dois valores
-        // numéricos e a operação desejada (soma, subtração, multiplicação ou divisão)
-        // mostre, no console, o
-        // resultado do cálculo.
+        //Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo teclado dois valores
+        //numéricos e a operação desejada (soma, subtração, multiplicação ou divisão)
+        //mostre, no console, o resultado do cálculo.
 
     }
 
