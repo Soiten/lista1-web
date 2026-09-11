@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -21,7 +22,8 @@ public class Main {
         // q16();
         // q17();
         // q18();
-        q19();
+        // q19();
+        q20();
     }
 
     private static void q01() {
@@ -355,12 +357,12 @@ public class Main {
         System.out.print("Digite 5 inteiros: ");
 
         Scanner scanner = new Scanner(System.in);
-        for(int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             numeros[i] = scanner.nextInt();
         }
 
         System.out.print("Os números foram: ");
-        for(int n : numeros){
+        for (int n : numeros) {
             System.out.print(n + " ");
         }
         scanner.close();
@@ -376,41 +378,43 @@ public class Main {
         System.out.print("Digite 10 números: ");
 
         Scanner scanner = new Scanner(System.in);
-        for(int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             numeros[i] = scanner.nextFloat();
         }
 
         System.out.print("Os números na ordem inversa: ");
 
-        for(int i = 9; i >= 0; i--){
+        for (int i = 9; i >= 0; i--) {
             System.out.print(numeros[i] + " ");
         }
         scanner.close();
     }
 
     private static void q19() {
-        // Faça um programa na linguagem Java que preencha por meio do teclado um vetor de 5 números inteiros
-        // e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5 números e os 5 números
+        // Faça um programa na linguagem Java que preencha por meio do teclado um vetor
+        // de 5 números inteiros
+        // e, depois, mostre no console a soma dos 5 números, a multiplicação entre os 5
+        // números e os 5 números
 
         int[] numeros = new int[5];
 
         System.out.print("Digite 5 inteiros: ");
 
         Scanner scanner = new Scanner(System.in);
-        for(int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             numeros[i] = scanner.nextInt();
         }
 
         int soma = 0;
-        for(int i = 0; i < 5; i++){
-            soma+=numeros[i];
+        for (int i = 0; i < 5; i++) {
+            soma += numeros[i];
         }
 
         int mult = 1;
-        for(int i = 0; i < 5; i++){
-            mult*=numeros[i];
+        for (int i = 0; i < 5; i++) {
+            mult *= numeros[i];
         }
-        
+
         System.out.println("Soma de todos: " + soma);
         System.out.println("Produto de todos: " + mult);
 
@@ -423,23 +427,50 @@ public class Main {
         // Armazene os números pares no vetor denominado “par” e os números
         // ímpares no vetor “ímpar”. Mostre no console os três vetores.
 
+        ArrayList<Integer> par = new ArrayList<>();
+        ArrayList<Integer> impar = new ArrayList<>();
+
+        System.out.print("Digite 20 inteiros: ");
+
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 20; i++) {
+            int n = scanner.nextInt();
+            if (n % 2 == 0)
+                par.add(n);
+            else
+                impar.add(n);
+        }
+
+        System.out.print("Números pares: ");
+        for (int n : par) {
+            System.out.print(n + " ");
+        }
+        System.out.println();
+        System.out.print("Números impares: ");
+        for (int n : impar) {
+            System.out.print(n + " ");
+        }
+        scanner.close();
     }
 
     private static void q21() {
         // Faça um programa na linguagem Java que receba, pelo teclado, 2 Strings e
         // informe, pelo console, o conteúdo delas seguido do seu comprimento. Mostre
         // também, no console, se as
-        // duas Strings possuem o mesmo comprimento e são iguais ou diferentes no conteúdo.
+        // duas Strings possuem o mesmo comprimento e são iguais ou diferentes no
+        // conteúdo.
     }
 
     private static void q22() {
         // Reverso do número. Faça um programa na linguagem Java que mostre, no console,
-        // o reverso de um número inteiro informado pelo teclado. Por exemplo: 127 <-> 721
+        // o reverso de um número inteiro informado pelo teclado. Por exemplo: 127 <->
+        // 721
 
     }
 
     private static void q23() {
-        // Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo teclado dois valores
+        // Calculadora básica. Faça um programa na linguagem Java que, recebidos pelo
+        // teclado dois valores
         // numéricos e a operação desejada (soma, subtração, multiplicação ou divisão)
         // mostre, no console, o resultado do cálculo.
 
