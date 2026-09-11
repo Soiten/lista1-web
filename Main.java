@@ -23,7 +23,8 @@ public class Main {
         // q17();
         // q18();
         // q19();
-        q20();
+        // q20();
+        q21();
     }
 
     private static void q01() {
@@ -459,6 +460,35 @@ public class Main {
         // também, no console, se as
         // duas Strings possuem o mesmo comprimento e são iguais ou diferentes no
         // conteúdo.
+
+        String s1 = "";
+        String s2 = "";
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite a primeira string: ");
+        s1 = scanner.nextLine();
+
+        System.out.println("Digite a segunda string: ");
+        s2 = scanner.nextLine();
+        
+        scanner.close();
+        
+        if (s1.length() != s2.length()) {
+            System.out.println("São diferentes");
+            return;
+        }
+
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) == s2.charAt(i)) {
+                continue;
+            } else {
+                System.out.println("São diferentes");
+                return;
+            }
+        }
+        System.out.println("São iguais");
+        
     }
 
     private static void q22() {
