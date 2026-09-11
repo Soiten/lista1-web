@@ -13,7 +13,8 @@ public class Main {
         //q08();
         //q09();
         //q10();
-        q11();
+        //q11();
+        q12();
     }
 
     private static void q01() {
@@ -200,6 +201,27 @@ public class Main {
         } else {
             System.out.println("O número " + n + " é ímpar");
         }
+        scanner.close();
+    }
+
+    private static void q12() {
+        //Faça um programa na linguagem Java que peça uma nota pelo teclado de 0 a 10. Mostre uma
+        //mensagem, no console, caso o valor seja inválido (nota menor que 0 ou maior 10) e continue pedindo
+        //notas até que o usuário informe um valor válido.
+        Scanner scanner = new Scanner(System.in);
+        int nota = -1;
+
+        do {
+            System.out.print("Digite uma nota de 0 a 10: ");
+            nota = scanner.nextInt();
+            if (nota < 0 || nota > 10) {
+                System.out.println("Nota inválida. Tente novamente.");
+            } else {
+                System.out.println("Nota válida: " + nota);
+                break;
+            }
+        } while (true);
+
         scanner.close();
     }
 
