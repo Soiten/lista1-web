@@ -14,7 +14,8 @@ public class Main {
         //q09();
         //q10();
         //q11();
-        q12();
+        //q12();
+        q13();
     }
 
     private static void q01() {
@@ -221,6 +222,44 @@ public class Main {
                 break;
             }
         } while (true);
+
+        scanner.close();
+    }
+
+    
+    private static void q13() {
+        //Numa eleição existem três candidatos. Faça um programa na linguagem Java que peça o número total de
+        //eleitores pelo teclado. Peça para cada eleitor vota pelo teclado e, ao final, mostre no console o número
+        //de votos de cada candidato.
+        int votosCandidato1 = 0, votosCandidato2 = 0, votosCandidato3 = 0;
+
+        System.out.print("Digite o número de eleitores: ");
+        Scanner scanner = new Scanner(System.in);
+        int totalEleitores = scanner.nextInt();
+
+        for (int i = 0; i < totalEleitores; i++) {
+            System.out.print("Eleitor " + (i + 1) + ", escolha seu candidato (1, 2 ou 3): ");
+            int voto = scanner.nextInt();
+            switch (voto) {
+                case 1:
+                    votosCandidato1++;
+                    break;
+                case 2:
+                    votosCandidato2++;
+                    break;
+                case 3:
+                    votosCandidato3++;
+                    break;
+                default:
+                    System.out.println("Voto inválido. Tente novamente.");
+                    i--;
+            }
+        }
+
+        System.out.println("Resultados da eleição:");
+        System.out.println("Candidato 1: " + votosCandidato1 + " votos");
+        System.out.println("Candidato 2: " + votosCandidato2 + " votos");
+        System.out.println("Candidato 3: " + votosCandidato3 + " votos");
 
         scanner.close();
     }
